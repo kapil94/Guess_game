@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded",function(){
 document.querySelector('.check').addEventListener('click',function(){
     
     
-    guess=Number(document.querySelector('input[class="guess"]').value);
+    guess=document.querySelector('input[class="guess"]').value;
     
-    if(guess==random)
+    if(Number(guess)==random)
     {
         var victory=document.querySelector("body");
         victory.classList.add("victory_color");
@@ -30,6 +30,9 @@ document.querySelector('.check').addEventListener('click',function(){
         elem.style.paddingTop="5%";
         
     
+    }
+    else if(guess==""){
+        alert("Enter value please..");
     }
     else{
 
