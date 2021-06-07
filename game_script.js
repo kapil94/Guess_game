@@ -42,6 +42,7 @@ document.querySelector('.check').addEventListener('click',function(){
 
             initial_score=initial_score-1;
             document.querySelector('span[class="score"]').textContent=initial_score;
+            document.querySelector("h2").textContent="Keep Guessing..";
             var elem=document.getElementById("Answer");
             elem.style.paddingTop="0%";
         }
