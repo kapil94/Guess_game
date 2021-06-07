@@ -63,7 +63,7 @@ function Again(){
     elem.style.paddingTop="0%";
     
     document.querySelector("span[class='score']").textContent=initial_score;
-    highscore="";
+    highscore=0;
     document.querySelector("span[class='HighScore']").textContent=highscore;
     document.querySelector("h2[class='result']").textContent="Keep Guessing..";
     document.getElementById("Guess").value="";
