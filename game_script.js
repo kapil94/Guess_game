@@ -24,7 +24,7 @@ document.querySelector('.check').addEventListener('click',function(){
             highscore=initial_score;
             document.querySelector('span[class="HighScore"]').textContent=highscore;
         }
-        document.querySelector("h2").textContent="Correct Guess!!";
+        document.querySelector("h2").textContent="🍻 Correct Guess!!";
         document.querySelector("div[class='answer']").textContent=document.getElementById("Guess").value;
         var elem=document.getElementById("Answer");
         elem.style.paddingTop="5%";
@@ -32,7 +32,9 @@ document.querySelector('.check').addEventListener('click',function(){
     
     }
     else if(guess==""){
-        alert("Enter value please..");
+        
+        
+        document.querySelector("h2").textContent="⛔ No Number!";
     }
     else{
 
@@ -45,7 +47,7 @@ document.querySelector('.check').addEventListener('click',function(){
 
             initial_score=initial_score-1;
             document.querySelector('span[class="score"]').textContent=initial_score;
-            document.querySelector("h2").textContent="Keep Guessing..";
+            document.querySelector("h2").textContent="Keep Guessing.. 🤔";
             var elem=document.getElementById("Answer");
             elem.style.paddingTop="0%";
         }
@@ -55,7 +57,7 @@ document.querySelector('.check').addEventListener('click',function(){
             document.getElementById("Answer").innerHTML='<i class="fas fa-question fa-5x"></i>';
             var elem=document.getElementById("Answer");
             elem.style.paddingTop="0%";
-            alert("You are out of guesses.. Please try again!");
+            document.querySelector("h2").textContent="You lost the game   😢";
 
         }
 
@@ -77,11 +79,11 @@ document.querySelector('.reset').addEventListener('click',function(){
     document.querySelector("span[class='score']").textContent=initial_score;
     highscore=0;
     document.querySelector("span[class='HighScore']").textContent=highscore;
-    document.querySelector("h2[class='result']").textContent="Keep Guessing..";
+    document.querySelector("h2[class='result']").textContent="Keep Guessing.. 🤔";
     document.getElementById("Guess").value="";
     var victory=document.querySelector("body");
     victory.classList.remove("victory_color");
     document.getElementById("Answer").innerHTML='<i class="fas fa-question fa-5x"></i>';
-
+    location.reload();
 
 });
