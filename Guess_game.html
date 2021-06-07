@@ -20,9 +20,9 @@
 <title>Guess Game</title>
 
 </head>
-<body onload="initialize()" class="victory_color">
+<body>
 <div class="container-fluid">
-    <button type="button" class="reset" onclick="Again()">Again!</button>
+    <button type="button" class="reset" >Again!</button>
     <h1>Guess My Number!</h1>
     <div class='answer' id='Answer'><i class="fas fa-question fa-5x"></i></div>
     <hr>
@@ -31,7 +31,7 @@
         <div class="col-sm-2">
            <input type="number" min="1" max="20" class="guess" id="Guess">
            <br>
-           <button type="button" class="check" onclick="check_Guessed()"> Check!</button>
+           <button type="button" class="check"> Check!</button>
         </div>
         <div class="col-sm-2">
             <h2 class="result">Keep Guessing..</h2>

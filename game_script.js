@@ -1,21 +1,21 @@
-var random;
+var guess,random;
 var initial_score=Number(document.querySelector('span[class="score"]').textContent);
 var highscore=Number(document.querySelector('span[class="HighScore"]').textContent);
 
-function initialize(){
-    var victory=document.querySelector("body")
-    victory.classList.remove("victory_color")
-    random=Math.random()*(20)+1
-    random=Math.floor(random)
-    console.log(random)
-}
-function check_Guessed(){
-    
-    
-    var guess=document.getElementById("Guess").value;
+document.addEventListener("DOMContentLoaded",function(){
 
-        if(guess==random)
-        {
+    random=Math.floor(Math.random()*(20)+1);
+    console.log(random);
+});
+
+
+document.querySelector('.check').addEventListener('click',function(){
+    
+    
+    guess=Number(document.querySelector('input[class="guess"]').value);
+    
+    if(guess==random)
+    {
         var victory=document.querySelector("body");
         victory.classList.add("victory_color");
         
@@ -29,10 +29,11 @@ function check_Guessed(){
         var elem=document.getElementById("Answer");
         elem.style.paddingTop="5%";
         
-      
-        
+    
     }
     else{
+
+
         if(initial_score!=0)
         {
             var victory=document.querySelector("body");
@@ -52,11 +53,14 @@ function check_Guessed(){
             elem.style.paddingTop="0%";
             alert("You are out of guesses.. Please try again!");
 
-        }      
+        }
+
+
     }
-}
-    
-function Again(){
+});
+
+document.querySelector('.reset').addEventListener('click',function(){
+
 
     if(document.getElementById("Guess").disabled=true)
     {
@@ -74,6 +78,6 @@ function Again(){
     var victory=document.querySelector("body");
     victory.classList.remove("victory_color");
     document.getElementById("Answer").innerHTML='<i class="fas fa-question fa-5x"></i>';
-    
-    initialize();
-}
+
+
+});
