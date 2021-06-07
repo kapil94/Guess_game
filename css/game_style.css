@@ -54,7 +54,7 @@ h2 {
   padding-top: 2%;
   font-size: 18px;
 }
-input[type="text"] {
+input[type="number"] {
   height: 100px;
   background-color: #282828;
   font-family: "Press Start 2P", cursive;
@@ -64,9 +64,6 @@ input[type="text"] {
   color: cornsilk;
 }
 
-input {
-  padding: 5px;
-}
 .victory_color {
   background-color: greenyellow;
 }
