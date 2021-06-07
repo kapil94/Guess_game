@@ -58,6 +58,10 @@ function check_Guessed(){
     
 function Again(){
 
+    if(document.getElementById("Guess").disabled=true)
+    {
+        document.getElementById("Guess").disabled=false;
+    }
     initial_score=20;
     var elem=document.getElementById("Answer");
     elem.style.paddingTop="0%";
